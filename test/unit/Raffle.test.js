@@ -148,13 +148,13 @@ const { developmentChains, networkConfig } = require("../../helper-hardhat-confi
                         console.log("Found the event!");
                         try {
                             const recentWinner = await raffle.getRecentWinner();
-                            console.log(recentWinner);
+                         
                             // console.log(accounts[2].address);
                             // console.log(accounts[0].address);
                             // console.log(accounts[1].address); //ALWAYS THIS
                             // console.log(accounts[3].address);
                             const raffleState = await raffle.getRaffleState();
-                            const endingTimeStamp = await raffle.getLatestTimeStamp();
+                            const endingTimeStamp = await raffle.getLatestTimeStamp();   console.log(recentWinner);
                             // Make sure that the funders are reset properly
                             const winnerEndingBalance = await accounts[1].getBalance(); //testing purposes
                             const numPlayers = await raffle.getNumberOfPlayers();
